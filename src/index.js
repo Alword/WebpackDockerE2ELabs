@@ -1,10 +1,21 @@
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = 'Hello webpack';
-  
-    return element;
+//@ts-check
+async function component() {
+  const element = document.createElement('div');
+
+  let url = "https://api.kanye.rest/";
+  let response = await fetch(url);
+
+  if (response.ok) { // если HTTP-статус в диапазоне 200-299
+    // получаем тело ответа (см. про этот метод ниже)
+    let json = await response.json();
+    
+    element.innerHTML = json.quote;
+  } else {
+    alert("Ошибка HTTP: " + response.status);
   }
   
-  document.body.appendChild(component());
+  
+  return element;
+}
+
+component().then(e=> document.body.appendChild(e))
