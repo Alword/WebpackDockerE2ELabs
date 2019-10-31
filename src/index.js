@@ -1,21 +1,9 @@
 //@ts-check
-async function component() {
-  const element = document.createElement('div');
 
-  let url = "https://api.kanye.rest/";
-  let response = await fetch(url);
+import React from 'react';
 
-  if (response.ok) { // если HTTP-статус в диапазоне 200-299
-    // получаем тело ответа (см. про этот метод ниже)
-    let json = await response.json();
-    
-    element.innerHTML = json.quote;
-  } else {
-    alert("Ошибка HTTP: " + response.status);
-  }
-  
-  
-  return element;
-}
+import ReactDOM from 'react-dom';
 
-component().then(e=> document.body.appendChild(e))
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
