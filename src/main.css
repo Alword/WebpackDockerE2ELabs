@@ -1,0 +1,9 @@
+html {background-color: black; color: white;} 
+
+#root {
+    position:absolute;
+    width:100%;
+    top:50%;
+    text-align:center;
+    font-size: 400%;
+}
