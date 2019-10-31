@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     entry: './src/index.js',
     plugins: [new HtmlWebpackPlugin({
-        title: 'Lab 2 WebPack Task 16',
+        template: './src/index.html',
     }),
     ],
     output: {
