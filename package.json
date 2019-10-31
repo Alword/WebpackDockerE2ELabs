@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Alword/WebpackDockerE2ELabs#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
