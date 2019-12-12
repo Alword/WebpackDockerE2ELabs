@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "test": "mocha --require isomorphic-fetch"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Alword/WebpackDockerE2ELabs#readme",
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
+    "mocha": "^6.2.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
@@ -27,6 +28,8 @@
     "@babel/preset-react": "^7.6.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "style-loader": "^1.0.0",

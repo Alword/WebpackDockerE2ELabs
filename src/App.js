@@ -6,16 +6,14 @@ export default function App() {
 
     React.useEffect(() => {
         Request(setData);
-        setInterval(() => {Request(setData);}, 10000);
+        setInterval(() => {Request(setData);}, 5000);
     }, []);
 
     return <div>{data}</div>;
 }
-
+const ft = require('../src/module').Request;
 const Request = (setData) => {
-    let url = "https://api.kanye.rest/";
-    fetch(url)
-        .then(response => response.json())
+    ft().then(response => response.json())
         .then(data => {
             setData(data.quote);
         });
