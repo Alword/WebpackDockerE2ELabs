@@ -6,6 +6,7 @@ RUN npm install
 
 # Stage 2
 RUN npm run build
+RUN npm run test
 
 # Stage 3
 FROM nginx:alpine
